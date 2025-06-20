@@ -1,0 +1,12 @@
+/ip firewall filter
+add comment="management network isolation - allow intra-network routing" action=accept chain=forward src-address-list=management dst-address-list=management
+add comment="management network isolation - allow inbound traffic from outbound initiated sessions" action=accept chain=forward dst-address-list=management connection-state=established,related
+add comment="management network isolation - allow router management" action=accept chain=input src-address-list=management
+add comment="management network isolation - deny external management network access" action=deny chain=forward dst-address-list=management
+add comment="management network isolation - deny external router management access" action=deny chain=input
+
+add comment="guest network isolation - deny guests accessing non-internet IPs" action=deny chain=forward src-address-list=guest dst-address-list=not_in_internet
+add comment="guest network isolation - deny guests accessing router" action=deny chain=input src-address-list=guest
+add comment="guest network isolation - allow guests accessing internet" action=allow chain=forward src-address-list=guest
+
+
