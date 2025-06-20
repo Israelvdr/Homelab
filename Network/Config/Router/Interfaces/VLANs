@@ -1,0 +1,8 @@
+/interface vlan
+add name=e03-vlan40 vlan-id=40 interface=ether3 disabled=no
+add name=e03-vlan4000 vlan-id=4000 interface=ether3 disabled=no
+
+add name=sfp01-vlan10 vlan-id=10 interface=sfp1 disabled=no
+add name=sfp01-vlan20 vlan-id=20 interface=sfp1 disabled=no
+add name=sfp01-vlan30 vlan-id=30 interface=sfp1 disabled=no
+add name=sfp01-vlan4000 vlan-id=4000 interface=sfp1 disabled=no
