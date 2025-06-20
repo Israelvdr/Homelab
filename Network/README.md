@@ -83,6 +83,7 @@ A third guest WLAN is configured as a copy of the first with a different SSID, a
 
 ### HV01
 Mini PC hypervisor running Proxmox.
+
 See [hypervisor docs](../Hypervisor) for details.
 
 ### NVR
@@ -100,6 +101,7 @@ Home desktop workstation.
 - 10.1.0.0/16
 - 10.2.0.0/24
 - 172.16.0.0/16
+
 See also [address lists](./RouterConfig/Firewall/AddressLists).
 #### Firewall/ACLs
 Management network is isolated from all networks.
